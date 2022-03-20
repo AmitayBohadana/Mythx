@@ -20,6 +20,6 @@ contract Greeter {
         greeting = _greeting;
     }
     function add(uint256 number) external {
-        x = x + number;
+        x = x - number;
     }
 }
