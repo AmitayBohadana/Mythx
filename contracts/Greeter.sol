@@ -5,7 +5,7 @@ import "hardhat/console.sol";
 
 contract Greeter {
     string private greeting;
-
+    uint256 x=0;
     constructor(string memory _greeting) {
         console.log("Deploying a Greeter with greeting:", _greeting);
         greeting = _greeting;
@@ -18,5 +18,8 @@ contract Greeter {
     function setGreeting(string memory _greeting) public {
         console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
         greeting = _greeting;
+    }
+    function add(uint256 number) external {
+        x = x + number;
     }
 }
